@@ -1,0 +1,579 @@
+body{
+    margin: 0;
+    background: #eee;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Roboto", "Helvetica";
+}
+
+a:hover, a:active, a:focus {
+    outline:0;
+}
+
+/*
+----------------------------------------    TOP BAR BLOCK STARTS ------------------------------------------
+*/
+
+.site-header{
+    background-color: #2c3136;
+    color: white;   
+    object-position: top;
+    position: static;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.site-header .menu-right{
+    background: transparent;
+}
+
+.site-header .dropper{
+    background: white;
+}
+
+.dropper a{
+    color: black;
+}
+
+.top-bar-right img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.fixed{
+    position: sticky;
+    left:0;
+    top: 0;
+    right: 0;
+     -webkit-transition: position 10s;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: position 10s;
+}
+
+.side-bar-fixed{
+    position: sticky;
+    left: 0;
+    top: 3.85em;
+    width: 100%;
+    right: 0;
+    transition: 0s;
+}
+
+/*
+------------------------------------------    TOP BAR BLOCK ENDS --------------------------------------
+*/
+
+/*
+-----------------------------------------    SIDE BAR CONTAINER -----------------------------------------
+*/
+
+#side-bar{
+    position: fixed;
+    float: left;
+    top: 0;
+    width: 10em;
+    z-index: -1;
+    max-height: 3000px;
+    background: #2c3136;
+    bottom: -120px;
+}
+
+/*
+ -------------------------------   SIDE BAR BLOCK STARTS -----------------------------------
+*/
+
+#side-bar-menu i{
+    height: 10px;
+    width: 15px;
+}
+
+.parent > li > a{
+    color: white;
+}
+
+#side-bar-menu i ~ span{
+    padding: 0 0.6em 0 0.6em;
+}
+
+#side-bar-menu > li:hover{
+    background-color: #1779BA;
+    color: white;
+}
+
+.side-bar{   
+    float: left;
+    font-size: 0.95em;
+    width: 10.5em;
+}   
+
+.services-list-container-header{
+    display: none;
+    padding-top: -10px;
+    padding-left: 15px;
+    font-size: 1.2em;
+    line-height: 20px;
+    color: white;    
+}
+
+.services-list-container {
+    visibility: hidden;
+    position: absolute;
+    margin-top: -30px;
+    width: 150px;
+    left: 140px;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    opacity: 0;
+    z-index: 100;
+    box-shadow: 0 6px 16px rgba(40, 40, 90, 0.15);
+    transition: opacity .4s ease;
+}
+
+.services-list-container a {
+    display: block;
+    padding: 5px;
+    color: #aaa;
+    padding-left: 15px;
+}
+
+.services-list-container a:hover{
+    color: dodgerblue;
+}
+
+.has-vertical:hover .services-list-container{
+  z-index: 80;
+  visibility: visible;
+    height: auto;
+    background: #121212;
+    opacity: 1;
+}
+
+.active{
+    color: dodgerblue;
+}
+
+.is-active > .services-list-container{
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    padding-top: 10px;
+    background: #121212;
+    visibility: visible;
+    opacity: 1;
+}
+
+.is-active > .addtriangle:after{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.is-active > .has-vertical:hover .services-list-container{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.addtriangle:after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 5%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+    height: 0;
+    width: 0;
+}
+
+.current > a{
+    color: white;
+}
+
+@media only screen and (max-width: 1024px){
+    #side-bar, .side-bar{
+        width: 3em;
+    }
+    
+    .side-bar i ~ span{
+        display: none;
+    }
+    
+    .services-list-container{
+        left: 2em;
+    }
+    
+    .services-list-container-header{
+        display: block;
+    }
+    
+    .is-active > .services-list-container{
+        visibility: hidden;
+        z-index: 1;
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 1em;
+        padding-top: 0;
+        width: 150px;
+        left: 2em;
+        padding-bottom: 10px;
+        opacity: 0;
+        box-shadow: 0 6px 16px rgba(40, 40, 90, 0.15);
+        transition: opacity .4s ease;
+    }
+    
+    .is-active > .addtriangle:after{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #side-bar{
+        width: 0;
+    }
+    
+    .side-bar{
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 1em;
+    }
+    
+    #side-bar.show{
+        width: 3em;
+    }
+    
+    .side-bar.show{
+        visibility: visible;
+        opacity: 1;
+        width: 3em;
+        transition: opacity .5s;
+    }   
+    
+}
+
+/*
+------------------------------------    SIDE BAR BLOCK ENDS -------------------------------
+*/
+
+/*
+----------------------------------- CONTENT BLOCK STARTS -------------------------------
+*/
+
+#content{
+    padding: 10px;
+    font-size: 0.85em;
+}
+
+@media screen and (max-width: 480px){
+    #content{
+        padding: 10px;
+    }
+}
+
+.submit{
+    background: #F44336;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.danger {
+    /*padding: 10px;*/
+    font-size: 14px;
+    color:#fff;
+    background-color: #f44336;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 16px;
+    text-align: center;
+    margin-top:16px;margin-bottom:16px;
+}
+
+.danger a{
+    color: whitesmoke;
+}
+
+.success {
+    /*padding: 10px;*/
+    font-size: 14px;
+    color:#fff;
+    background-color: #4CAF50;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 16px;
+    text-align: center;
+    margin-top:16px;margin-bottom:16px;
+}
+
+.success a{
+    color: whitesmoke;
+}
+
+.light-back{
+    background: white;    
+}
+
+.border-bottom{
+    border-bottom-color: black;
+    border-bottom: 1px solid;
+}
+
+#mytextarea{
+    height: auto;
+}
+
+/**************************
+DASHBOARD STYLES
+**************************/
+.card-divider{
+    background-color: #116699;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.card{
+    border: none;
+    /* box-shadow: 0.2em 0.2em .5em rgba(0,0,0,0.5);*/
+}
+
+.count-stats{
+    text-align: center;
+}
+
+.help-text{
+    font-style: normal;
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-5deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-5deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-5deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-5deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-5deg, 0deg);
+}
+
+
+/*
+    EDITOR STYLES START
+*/
+
+iframe{
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    width: 100%;
+    min-height: 300px;
+    background: white;
+}
+        
+.editor-container{
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.toolbar{
+    padding-top: 10px;
+    padding-left: 10px;
+    height: auto;
+    background: #f5f5f5;
+    margin-bottom: -5px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+        
+.toolbar button{
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+        
+.toolbar button:hover{
+    z-index: -1;
+    background-color: #ddd;
+}
+
+.toolbar .button-active{
+    z-index: -1;
+    background-color: #ddd;
+}
+
+ .vl {
+      border-left: 2px solid #d5d5d5;
+      transform: scaleY(4.5);
+      padding: 2px;
+}
+
+.dropdown-editor{
+    display: inline;
+    width: 65px;
+    cursor: pointer;
+}
+
+.toolbar select{
+    align-self: center;
+}
+        
+.fullscreen{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 110;
+}
+
+.fullscreen > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#insertItems-Dropdown > li{
+    display: inline-block;
+}
+
+
+.editor-status-bar{
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+/*
+    EDITOR STYLES ENDS
+*/
+
+/***
+POST BLOCK START
+***/
+.post-right-container{
+    background-color: white;
+    width: 100%;
+}
+
+.post-right-button{
+    cursor: pointer;
+}
+
+.post-right-title{
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.inner-container{
+    padding: 10px;
+}
+
+.part-container{
+    margin-bottom: 25px;
+}
+
+/***
+POST BLOCK END
+***/
+/***
+TABLE RESPONSIVE START
+***/
+th{
+    text-align: left;
+    object-position: center;
+}
+
+tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tr > td:nth-of-type(2) > a{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px){
+    tr > th:nth-of-type(n){
+        display: inline-block;
+    }
+    
+    tr>td:nth-of-type(n){
+        display: inline-block;
+    }
+    
+    tr > td:nth-of-type(2) > a{
+        display: inline;
+        content: " ";
+        border: 1px solid;
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        right: 35px; /* To the left of the tooltip */
+        margin-top: 0px;
+    }
+    
+    tr > th:nth-of-type(n+3),tr > td:nth-of-type(n+3){
+        display: none;
+    }
+    
+    tr > td:nth-of-type(n+3):before{
+        content: attr(data-label);
+        width: 10px;
+        margin-right: 10px;
+        background-color: #565656;
+        color: white;
+    }
+    
+    tr> td{
+        word-wrap: normal;
+    }
+}
+/***
+TABLE RESPONSIVE END
+***/
+.theme-screenshot{
+    background-color: #fff;
+    border-radius: .5em;
+    border: 2px black;
+    text-align: center;
+}
+
+.theme-name{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.screenshot-thumbnail{
+    padding: 10px;
+    object-fit: cover;
+}
+
+.screenshot-activate-container{
+    padding: 10px;
+}
+
+.is-active-theme{
+    background-color: #222;
+    color: white;
+}
+
+.customise-content{
+    height: 100vh;
+}
+/*
+----------------------------------- CONTENT BLOCK ENDS -------------------------------------
+*/

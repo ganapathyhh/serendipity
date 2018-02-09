@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<all-pages>
+    <page>
+        <title><![CDATA[sample page]]></title>
+        <content><![CDATA[Welcome to this page]]></content>
+        <template><![CDATA[post]]></template>
+        <meta><![CDATA[hello]]></meta>
+        <adddate><![CDATA[2018-01-30 13:51:05]]></adddate>
+        <visdate><![CDATA[2018-01-30 23:51:05]]></visdate>
+        <remdate><![CDATA[]]></remdate>
+        <status><![CDATA[auto-draft]]></status>
+        <author><![CDATA[sghh]]></author>
+    </page>
+    <page>
+        <title><![CDATA[sample page]]></title>
+        <content><![CDATA[Welcome to this sngjdsjg js kahdhefpage ]]></content>
+        <template><![CDATA[post]]></template>
+        <meta><![CDATA[hello]]></meta>
+        <adddate><![CDATA[2018-01-30 15:51:05]]></adddate>
+        <visdate><![CDATA[2018-01-30 23:31:05]]></visdate>
+        <remdate><![CDATA[]]></remdate>
+        <status><![CDATA[auto-draft]]></status>
+        <author><![CDATA[sghh]]></author>
+    </page>
+</all-pages>
